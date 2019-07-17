@@ -1,0 +1,13 @@
+{%extends '_layout.html'%}
+{% block content%}
+{%if name%}
+<h1>Successfully added {{name}}</h1>
+{%endif%}
+<form action="{{url_for('store_form')}}" method="POST">
+    <div class="form-group">
+        <label for='store_name'>Store Name</label>
+        <input type='text' class='form-control' name='store_name' placeholder='Enter store name here'>
+    </div>
+    <button type='submit' class='btn btn-primary'>Submit</button>
+</form>
+{% endblock%}
